@@ -11,17 +11,17 @@ type AppState = 'landing' | 'setup' | 'content' | 'saved';
 
 const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('linguaLearn_state');
+    const saved = localStorage.getItem('languaLearn_state');
     return (saved as AppState) || 'landing';
   });
   
   const [selectedLang, setSelectedLang] = useState<LanguageCode>(() => {
-    const saved = localStorage.getItem('linguaLearn_lang');
+    const saved = localStorage.getItem('languaLearn_lang');
     return (saved as LanguageCode) || 'en';
   });
   
   const [savedWords, setSavedWords] = useState<SavedVocabulary[]>(() => {
-    const saved = localStorage.getItem('linguaLearn_saved_words');
+    const saved = localStorage.getItem('languaLearn_saved_words');
     return saved ? JSON.parse(saved) : [];
   });
   
@@ -32,9 +32,9 @@ const App: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    localStorage.setItem('linguaLearn_lang', selectedLang);
-    localStorage.setItem('linguaLearn_state', appState);
-    localStorage.setItem('linguaLearn_saved_words', JSON.stringify(savedWords));
+    localStorage.setItem('languaLearn_lang', selectedLang);
+    localStorage.setItem('languaLearn_state', appState);
+    localStorage.setItem('languaLearn_saved_words', JSON.stringify(savedWords));
   }, [selectedLang, appState, savedWords]);
 
   const handleStartSetup = () => {
@@ -107,7 +107,7 @@ const App: React.FC = () => {
             <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white text-sm font-bold group-hover:bg-indigo-600 transition-colors">
               L
             </div>
-            <h1 className="text-lg font-bold text-slate-900 tracking-tight">LinguaLearn</h1>
+            <h1 className="text-lg font-bold text-slate-900 tracking-tight">LanguaLearn</h1>
           </div>
 
           <div className="flex items-center gap-6">
@@ -254,7 +254,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="py-16 border-t border-slate-50 text-center">
-        <p className="text-[10px] font-black text-slate-200 uppercase tracking-[0.6em]">LinguaLearn AI &copy; 2026</p>
+        <p className="text-[10px] font-black text-slate-200 uppercase tracking-[0.6em]">LanguaLearn AI &copy; 2026</p>
       </footer>
     </div>
   );

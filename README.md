@@ -1,8 +1,8 @@
-# 🌍 LinguaLearn: AI-Powered Contextual Language Tutoring
+# 🌍 LanguaLearn: AI-Powered Contextual Language Tutoring
 
 > **Learn the language you actually need.**
 
-LinguaLearn is a sophisticated, minimalist language learning platform designed for the modern learner. By harnessing the reasoning and synthesis capabilities of the **Google Gemini API**, LinguaLearn moves beyond static textbooks to provide a dynamic, context-first learning environment.
+LanguaLearn is a sophisticated, minimalist language learning platform designed for the modern learner. By harnessing the reasoning and synthesis capabilities of the **Google Gemini API**, LanguaLearn moves beyond static textbooks to provide a dynamic, context-first learning environment.
 
 ## 💡 Inspiration
 
@@ -10,7 +10,7 @@ Traditional language learning apps often feel rigid and disconnected from real l
 
 ## 🚀 What it does
 
-LinguaLearn allows users to:
+LanguaLearn allows users to:
 *   **Generate Custom Lessons:** Simply describe a scenario (e.g., "Negotiating a contract in Berlin" or "Buying train tickets in Osaka") and get a bespoke lesson instantly.
 *   **Explore Common Themes:** Quick access to essential topics like Daily Life, Food & Dining, Travel, and Healthcare.
 *   **Listen to Native-Quality Audio:** Every word and phrase comes with high-fidelity Text-to-Speech (TTS) to perfect your pronunciation.
@@ -18,7 +18,7 @@ LinguaLearn allows users to:
 
 ## ⚙️ How we built it
 
-We built LinguaLearn using a modern, performance-focused stack:
+We built LanguaLearn using a modern, performance-focused stack:
 
 *   **Frontend:** [React 19](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/) for type safety.
 *   **Build Tool:** [Vite](https://vitejs.dev/) for lightning-fast development and building.
@@ -41,7 +41,7 @@ Working with experimental TTS models can be unpredictable. We encountered issues
 *   **Seamless AI Integration:** The transition between user input and lesson generation feels magical. The structured JSON output from Gemini 3.0 Flash is parsed and rendered instantly into interactive cards.
 *   **Multi-Language Support:** We successfully integrated support for 10 languages, including complex scripts like Japanese (Romaji), Chinese (Pinyin), and Korean, ensuring correct pronunciation guides are generated.
 
-## 🔮 What's next for LinguaLearn
+## 🔮 What's next for LanguaLearn
 
 *   **User Accounts:** syncing progress across devices.
 *   **Gamification:** Streaks, daily goals, and achievements.
@@ -50,12 +50,12 @@ Working with experimental TTS models can be unpredictable. We encountered issues
 
 ## 🛠️ Getting Started
 
-To run LinguaLearn locally:
+To run LanguaLearn locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/lingualearn.git
-    cd lingualearn
+    git clone https://github.com/yourusername/langualearn.git
+    cd langualearn
     ```
 
 2.  **Install dependencies:**
