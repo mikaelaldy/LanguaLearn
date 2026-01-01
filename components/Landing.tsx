@@ -16,7 +16,7 @@ const Landing: React.FC<LandingProps> = ({ onStart }) => {
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-bold tracking-tight uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
-              LinguaLearn AI
+              LanguaLearn AI
             </div>
           </div>
           
@@ -25,7 +25,7 @@ const Landing: React.FC<LandingProps> = ({ onStart }) => {
           </h1>
           
           <p className="text-lg sm:text-xl text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
-            Stop memorizing disconnected lists. LinguaLearn generates bespoke lessons for your specific life scenarios using Gemini 3.0.
+            Stop memorizing disconnected lists. LanguaLearn generates bespoke lessons for your specific life scenarios using Gemini 3.0.
           </p>
           
           <div className="pt-10">
