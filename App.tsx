@@ -104,9 +104,7 @@ const App: React.FC = () => {
             className="flex items-center gap-2 cursor-pointer group" 
             onClick={() => setAppState('landing')}
           >
-            <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white text-sm font-bold group-hover:bg-indigo-600 transition-colors">
-              L
-            </div>
+            <img src="/logo.png" alt="LinguaLearn Logo" className="w-8 h-8 rounded-lg" />
             <h1 className="text-lg font-bold text-slate-900 tracking-tight">LinguaLearn</h1>
           </div>
 
