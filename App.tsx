@@ -49,9 +49,9 @@ const App: React.FC = () => {
     try {
       const content = await generateLesson(selectedLang, theme);
       setLessonContent(content);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Failed to generate lesson:", err);
-      setError("We encountered a server issue while creating your lesson. Please try again.");
+      setError(err.message || "We encountered a server issue while creating your lesson. Please try again.");
     } finally {
       setLoading(false);
     }

@@ -15,7 +15,12 @@ const LANGUAGE_NAMES: Record<LanguageCode, string> = {
 };
 
 export async function generateLesson(language: LanguageCode, theme: string): Promise<LessonContent> {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.API_KEY;
+  if (!apiKey) {
+    throw new Error("Configuration Error: API Key is missing. Please check your Vercel settings.");
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
   const targetLanguage = LANGUAGE_NAMES[language];
 
   const response = await ai.models.generateContent({
@@ -92,7 +97,12 @@ export async function generateLesson(language: LanguageCode, theme: string): Pro
 }
 
 export async function generateMoreVocabulary(language: LanguageCode, theme: string, existingWords: string[]): Promise<VocabularyItem[]> {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.API_KEY;
+  if (!apiKey) {
+    throw new Error("Configuration Error: API Key is missing. Please check your Vercel settings.");
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
   const targetLanguage = LANGUAGE_NAMES[language];
 
   const response = await ai.models.generateContent({
@@ -170,7 +180,11 @@ export async function generateSpeech(text: string, language: LanguageCode): Prom
     const prompt = promptVariations[promptIdx](sanitizedText);
     
     // Always create a fresh instance per call for maximum isolation/reliability
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error("Configuration Error: API Key is missing. Please check your Vercel settings.");
+    }
+    const ai = new GoogleGenAI({ apiKey });
 
     try {
       const result = await ai.models.generateContent({
