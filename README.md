@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/logo.png" alt="LinguaLearn Logo" width="120" />
+</p>
+
 # 🌍 LinguaLearn: AI-Powered Contextual Language Tutoring
 
 > **Learn the language you actually need.**
