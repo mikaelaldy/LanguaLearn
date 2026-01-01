@@ -11,9 +11,7 @@ const Landing: React.FC<LandingProps> = ({ onStart }) => {
       <section className="flex-1 flex flex-col items-center justify-center pt-32 pb-20 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="flex flex-col items-center gap-6 animate-in fade-in zoom-in duration-1000">
-            <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-white text-3xl font-black shadow-2xl shadow-slate-200">
-              L
-            </div>
+            <img src="/logo.png" alt="LanguaLearn Logo" className="w-16 h-16 rounded-2xl shadow-2xl shadow-slate-200" />
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-bold tracking-tight uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
               LanguaLearn AI
